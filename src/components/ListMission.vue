@@ -1,12 +1,19 @@
 <template>
 <!--  //这一块是所有的任务选项，以及配置了一些class标准-->
-  <div id="mission" @mouseover="hangover" @mouseleave="passaway" :class="missionStyle"  @click="changeSel(todoObj.id)">
-    <input type="checkbox" :checked="todoObj.done">{{todoObj.name}}
-    <button id="delete" v-show="selected" @click="deleteMis(todoObj.id)">Delete</button>
-  </div>
+  <transition 
+  name="animate__animated animate__bounce"
+  enter-active-class="animate__backInRight"
+  leave-active-class="animate__backOutRight"
+  >
+    <div id="mission" @mouseover="hangover" @mouseleave="passaway" :class="missionStyle"  @click="changeSel(todoObj.id)">
+      <input type="checkbox" :checked="todoObj.done">{{todoObj.name}}
+      <button id="delete" v-show="selected" @click="deleteMis(todoObj.id)">Delete</button>
+    </div>
+  </transition>
 </template>
 
 <script>
+import 'animate.css';
 export default {
   name: "ListMission",
   data(){
