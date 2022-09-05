@@ -75,6 +75,6 @@ export default {
   text-align:center;
   height: auto;
   width:300px;
-  overflow: auto;
+  overflow:auto;
 }
 </style>

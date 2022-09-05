@@ -18,12 +18,16 @@ $ git clone https://github.com/U2yyy/To-DoList.git
 $ npm install
 ```
 
-### 运行项目
+### 项目试运行
 
 ```shell
 $ npm run serve
 ```
+### 项目打包
 
+```shell
+$ npm run build
+```
 
 
 ## 拥有的功能
